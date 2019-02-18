@@ -1,0 +1,22 @@
+---
+title: "Multivariate Analysis Project Proposal"
+author: "Group 4"
+date: "8 March 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1.	Background to data set – why is this an interesting data set?
+
+##2.	Why is it a multivariate data set?
+
+##3.	General aim of the future multivariate analysis (not set in stone!)
+
+Note:  
+- No need to specify concrete statistical methods (yet!)  
+- Not more than 1-2 pages  
+- One proposal per group  
+
