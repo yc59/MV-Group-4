@@ -10,6 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## 1.	Background to data set – why is this an interesting data set?
+In this analysis the popculture/imdb-5000-movie-dataset from the data.world repository has been used  (https://data.world/popculture/imdb-5000-movie-dataset/workspace/file?filename=movie_metadata.csv%2Fmovie_metadata.csv). The dataset was created by Chuan Sun (@sundeepblue on Github) who "scraped tons of metadata using a combination of www.the-numbers.com, IMDB.com, and a Python library called "scrapy". He was able to obtain 28 variables for 5043 movies and 4906 posters (998MB), spanning across 100 years in 66 countries. There are 2399 unique director names, and thousands of actors/actresses." (reference)
 
 ##2.	Why is it a multivariate data set?
 
