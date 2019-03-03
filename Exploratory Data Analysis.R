@@ -9,6 +9,8 @@
 library(tidyverse)
 library(psych)
 library(GGally)
+library(ggplot2)
+library(dplyr)
 
 # IMPORT DATA -------------------------------------------------------------
 imdbData <- read.csv("Data/IMDB Data.csv", header = TRUE)
@@ -54,7 +56,33 @@ content_ratings_levels <- levels(imdbData$content_rating) #19 levels
 
 # GRAPHICAL ANALYSIS ------------------------------------------------------
 #pairs(imdbData_numeric) #Not easy to read - toomany variables
+
+# set duration as colour with sample
+# sparsed
+pairs(sample_n(imdbData, 1000), pch = 19,  cex = 0.5,
+      col = imdbData$duration,
+      lower.panel=NULL)
+
+# set language as colour with sample
+# mainly English i suppose
+pairs(sample_n(imdbData, 1000), pch = 19,  cex = 0.5,
+      col = imdbData$language,
+      lower.panel=NULL)
+
+# set genres as colour with sample
+pairs(sample_n(imdbData, 1000), pch = 19,  cex = 0.5,
+      col = imdbData$genres,
+      lower.panel=NULL)
+
+# ggplot 
+ggplot(sample_n(imdbData, 1000), aes(x=imdb_score, y=gross,
+      color=duration)) + geom_point()
+str(imdbData)
+
+
+# ggcorr
 ggcorr(imdbData_numeric, label = TRUE)
+
 
 par(mfrow = c(2, 2))
 apply(imdbData_numeric, MARGIN = 2, FUN = hist)
