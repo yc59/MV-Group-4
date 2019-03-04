@@ -19,6 +19,12 @@ Multivariate data is the data in which analysis are based on more than two varia
 It is with the above points in mind that we believe there may be an underlying structure in the data, whether it be a correlation between multiple variables or an unexplained trend. There have been many cases when movie critics have given poor reviews and yet the movie has gone on to be a box office success. This gives us more reason to believe that there is additional structure in the dataset which hopefully can be explored using the social media data. By combining the analysis of the continuous variables with the factor variables, we hope to uncover any hidden structure.
 
 ##3.	General aim of the future multivariate analysis (not set in stone!)
+Because of the popularity of social platforms, the social media campaign now becomes one of the most important marketing tactics for movie industry. According to previous researches, such as Pardo’s paper (2013), social media have great impact on movie qualitatively. However, in this study, we aim to investigate the quantitative relationship between social media and movie performance such as box office and movie ratings.
+
+
+Reference:
+Pardo, A., 2013. Digital Hollywood: How Internet and Social media are changing the movie business. In Handbook of Social Media Management (pp. 327-347). Springer, Berlin, Heidelberg.
+
 
 Note:  
   - No need to specify concrete statistical methods (yet!)  
