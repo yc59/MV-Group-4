@@ -2,10 +2,12 @@
 title: "Multivariate Analysis Project Proposal"
 author: "Group 4"
 date: "8 March 2019"
-output: pdf_document
+output:
+  word_document: default
+  pdf_document: default
 ---
-
-```{r setup, include=FALSE}
+  
+  ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -13,11 +15,12 @@ knitr::opts_chunk$set(echo = TRUE)
 In this analysis the popculture/imdb-5000-movie-dataset from the data.world repository has been used  (https://data.world/popculture/imdb-5000-movie-dataset/workspace/file?filename=movie_metadata.csv%2Fmovie_metadata.csv). The dataset was created by Chuan Sun (@sundeepblue on Github) who "scraped tons of metadata using a combination of www.the-numbers.com, IMDB.com, and a Python library called "scrapy". He was able to obtain 28 variables for 5043 movies and 4906 posters (998MB), spanning across 100 years in 66 countries. There are 2399 unique director names, and thousands of actors/actresses." (reference)
 
 ##2.	Why is it a multivariate data set?
+Multivariate data is the data in which analysis are based on more than two variables per observation. In the case of the IMDB movie dataset, there are clearly multiple variables to work with, hence, fulfilling the basic criteria to be multivariate. However, the dataset must also be multivariate in the sense that the relationships between variables are not univariate, i.e. it would not be appropriate to model with a linear model.  With the dataset in question we have reason to believe that the relationship between certain variables is not univariate. For example, the gross income may be modelled using multiple other variables, however, other variables in the dataset may in turn be affected by the gross income, perhaps the IMBD score. This suggests that it may be inappropriate to model any particular variable in the dataset with a linear or generalised linear model. Instead multivariate methods such as PCA may be more appropriate. 
+It is with the above points in mind that we believe there may be an underlying structure in the data, whether it be a correlation between multiple variables or an unexplained trend. There have been many cases when movie critics have given poor reviews and yet the movie has gone on to be a box office success. This gives us more reason to believe that there is additional structure in the dataset which hopefully can be explored using the social media data. By combining the analysis of the continuous variables with the factor variables, we hope to uncover any hidden structure.
 
 ##3.	General aim of the future multivariate analysis (not set in stone!)
 
 Note:  
-- No need to specify concrete statistical methods (yet!)  
+  - No need to specify concrete statistical methods (yet!)  
 - Not more than 1-2 pages  
-- One proposal per group  
-
+- One proposal per group 
