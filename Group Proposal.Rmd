@@ -33,6 +33,8 @@ It is with the above points in mind that we believe there may be an underlying s
 ##3.	General aim of the future multivariate analysis (not set in stone!)
 Due to the increasing popularity of social platforms, the social media campaign has now become an important marketing tactic in the movie industry. Previous research, such as Pardo’s paper (2013), found that social media has a great impact on movie qualitatively. In this study, we aim to investigate the quantitative relationship between social media and movie performance such as box office and movie ratings.
 
+Our second general aim would be to investigate the relationship among film box office grosses, budget and the county of origin. Hollywood’s stereotypes seemingly dominate in reality, while most films around the world are produced from English-speaking countries. In the wave of globalisation and with the popularity of social media nowadays, we wish to question if cultural diversity in film industry still exists as in other forms of arts. Regarding inter-country, or in a broader sense, inter-continent cultural difference, we think that a principle component or cluster analysis would be a good starting point. The characteristics of the mainstream film in various countries should reflect the colour of their culture. We also would like to have a glimpse into the niche markets for film industry. These films of interest could be non-mainstream, low-budget or independent film. We would examine if these films could satisfy specific market needs. 
+
 ##Reference List  
 Pardo, A., 2013. Digital Hollywood: How Internet and Social media are changing the movie business. In Handbook of Social Media Management (pp. 327-347). Springer, Berlin, Heidelberg.
 
