@@ -57,6 +57,57 @@ content_ratings_levels <- levels(imdbData$content_rating) #19 levels
 # GRAPHICAL ANALYSIS ------------------------------------------------------
 #pairs(imdbData_numeric) #Not easy to read - toomany variables
 
+
+# we transform all of the numeric in order to limit their value between a small range
+
+#Actually, I ever try to use the normal to scale 
+# imdbData_numeric_trans$num_critic_for_reviews<-(imdbData_numeric$num_critic_for_reviews-mean(imdbData_numeric$num_critic_for_reviews))/100
+# but above code cannot work
+# the reason why I didn't choose to normalize the data(normally called centralization)
+# because there is no any evidence we are supposed to do when distributions of variables 
+# are unknown.
+# Therefore I just adopt "x-mean/scale" to tranform our numeric data.
+
+
+# we transform all of the numeric in order to limit their value between a small range based on results from above code
+# "describe(imdbData_numeric, skew = FALSE)"
+.
+imdbData_numeric_trans<-imdbData_numeric
+imdbData_numeric_trans$num_critic_for_reviews<-(imdbData_numeric$num_critic_for_reviews-140.19)/100
+imdbData_numeric_trans$duration<-(imdbData_numeric$duration-107.20)/100
+imdbData_numeric_trans$director_facebook_likes<-(imdbData_numeric$director_facebook_likes-686.51)/10000
+imdbData_numeric_trans$actor_3_facebook_likes<-(imdbData_numeric$actor_3_facebook_likes-645.01)/10000
+imdbData_numeric_trans$actor_1_facebook_likes<-(imdbData_numeric$actor_1_facebook_likes- 6560.05)/100000
+imdbData_numeric_trans$gross<-(imdbData_numeric$gross-48468407.53)/100000000
+imdbData_numeric_trans$num_voted_users<-(imdbData_numeric$num_voted_users-83668.16)/1000000
+imdbData_numeric_trans$cast_total_facebook_likes<-(imdbData_numeric$cast_total_facebook_likes-9699.06)/100000
+imdbData_numeric_trans$facenumber_in_poster<-(imdbData_numeric$facenumber_in_poster-1.37)/10
+imdbData_numeric_trans$budget<-(imdbData_numeric$budget-39752620.44)/10000000000
+imdbData_numeric_trans$num_user_for_reviews<-(imdbData_numeric$num_user_for_reviews-272.77)/1000
+imdbData_numeric_trans$actor_2_facebook_likes<-(imdbData_numeric$actor_2_facebook_likes- 1651.75)/100000
+imdbData_numeric_trans$imdb_score<-imdbData_numeric$imdb_score-6.44
+imdbData_numeric_trans$movie_facebook_likes<-(imdbData_numeric$movie_facebook_likes-7525.96)/100000
+
+imdbData_numeric_1<-imdbData_numeric_trans[,1:7]
+imdbData_numeric_2<-imdbData_numeric_trans[,8:14]
+
+library(PerformanceAnalytics)
+chart.Correlation(imdbData_numeric_1, bg=imdbData_numeric_1)
+chart.Correlation(imdbData_numeric_1, bg=imdbData_numeric_2)
+chart.Correlation(imdbData_numeric_2, bg=imdbData_numeric_2)
+
+# Similarly,we seperate imdbData_factor into two parts for a clear observation.
+library(PerformanceAnalytics)
+imdbData_factor_1<-imdbData_factor[,1:7]
+imdbData_factor_2<imdbData_factor[,8:14]
+
+# chart.Correlation seems function well for numeric data but not for factor
+chart.Correlation(imdbData_factor_1, bg=imdbData_factor_1)
+chart.Correlation(imdbData_factor_1, bg=imdbData_factor_2)
+chart.Correlation(imdbData_factor_2, bg=imdbData_factor_2)
+
+
+
 # set duration as colour with sample
 # sparsed
 pairs(sample_n(imdbData, 1000), pch = 19,  cex = 0.5,
